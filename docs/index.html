@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCS Business Messaging Templates — Production-Ready JSON</title>
+    <meta name="description" content="Free, GSMA Universal Profile compliant JSON templates for RCS Business Messaging. Rich cards, carousels, suggested actions, calendar events, and more.">
+    <meta name="keywords" content="RCS, Business Messaging, GSMA, templates, JSON, rich cards, carousel, API">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #0b1b2b; background: #f4f8fd; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2.2rem; margin-bottom: 12px; color: #0d6efd; }
+        h2 { font-size: 1.4rem; margin: 32px 0 16px; color: #0b1b2b; }
+        .subtitle { font-size: 1.1rem; color: #4f5f71; margin-bottom: 32px; }
+        .template-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+        .template-card { background: #fff; border: 1px solid #d9e4f0; border-radius: 12px; padding: 20px; }
+        .template-card h3 { font-size: 1rem; margin-bottom: 8px; }
+        .template-card p { font-size: 0.9rem; color: #4f5f71; }
+        .template-card a { color: #0d6efd; text-decoration: none; font-weight: 500; }
+        .template-card a:hover { text-decoration: underline; }
+        .checklist { background: #fff; border: 1px solid #d9e4f0; border-radius: 12px; padding: 24px; margin: 24px 0; }
+        .checklist li { margin: 8px 0; font-size: 0.95rem; }
+        .cta { background: linear-gradient(135deg, #0d6efd 0%, #12b5cb 100%); color: #fff; border-radius: 12px; padding: 32px; margin: 40px 0; text-align: center; }
+        .cta h2 { color: #fff; margin-top: 0; }
+        .cta p { color: rgba(255,255,255,0.9); margin: 12px 0 20px; }
+        .cta a { background: #fff; color: #0d6efd; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .cta a:hover { background: #f0f7ff; }
+        .badge { display: inline-block; background: #ecf3fb; color: #0d6efd; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500; margin-right: 8px; }
+        code { background: #ecf3fb; padding: 2px 6px; border-radius: 4px; font-size: 0.9rem; }
+        @media (max-width: 600px) { .template-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RCS Business Messaging Templates</h1>
+        <p class="subtitle">Production-ready JSON templates for RCS. GSMA Universal Profile compliant. Free & open source.</p>
+        
+        <div style="margin: 16px 0;">
+            <span class="badge">GSMA Compliant</span>
+            <span class="badge">JSON</span>
+            <span class="badge">RCS UP</span>
+            <span class="badge">MIT License</span>
+        </div>
+
+        <h2>Free Templates</h2>
+        <div class="template-grid">
+            <div class="template-card">
+                <h3>📝 Text + Suggested Actions</h3>
+                <p>Quick-reply buttons for user interaction. Max 4 suggestions.</p>
+                <a href="https://github.com/Dr-Agentic/rcs-templates/blob/main/templates/01-text-suggestions.json">View JSON →</a>
+            </div>
+            <div class="template-card">
+                <h3>🖼️ Rich Card (Vertical)</h3>
+                <p>Image + title + description + buttons. The workhorse of RCS.</p>
+                <a href="https://github.com/Dr-Agentic/rcs-templates/blob/main/templates/02-richcard-vertical.json">View JSON →</a>
+            </div>
+            <div class="template-card">
+                <h3>🎠 Carousel (2 Cards)</h3>
+                <p>Swipeable card layout. Max 10 cards per carousel.</p>
+                <a href="https://github.com/Dr-Agentic/rcs-templates/blob/main/templates/03-carousel-2.json">View JSON →</a>
+            </div>
+            <div class="template-card">
+                <h3>📅 Calendar Action</h3>
+                <p>Add events to calendar directly from message.</p>
+                <a href="https://github.com/Dr-Agentic/rcs-templates/blob/main/templates/04-calendar-action.json">View JSON →</a>
+            </div>
+            <div class="template-card">
+                <h3>💬 Suggested Reply</h3>
+                <p>Lightweight reply chips for simple routing.</p>
+                <a href="https://github.com/Dr-Agentic/rcs-templates/blob/main/templates/05-suggested-reply.json">View JSON →</a>
+            </div>
+            <div class="template-card">
+                <h3>🧪 Test on RCS X</h3>
+                <p>Test your payloads free. No carrier agreements needed.</p>
+                <a href="https://rcsxplatform.net">Try Free →</a>
+            </div>
+        </div>
+
+        <h2>GSMA Validation Quick Checklist</h2>
+        <div class="checklist">
+            <ul>
+                <li>✅ <code>contentMessage</code> wrapper is present</li>
+                <li>✅ Valid JSON (no trailing commas, proper quotes)</li>
+                <li>✅ Text ≤ 3072 characters, UTF-8</li>
+                <li>✅ <code>cardOrientation</code> is VERTICAL or HORIZONTAL</li>
+                <li>✅ Title ≤ 200 chars, Description ≤ 2000 chars</li>
+                <li>✅ Media height: SHORT, MEDIUM, or TALL</li>
+                <li>✅ <code>fileUrl</code> uses HTTPS (HTTP rejected)</li>
+                <li>✅ Image max 3.5MB JPEG, 1MB PNG</li>
+                <li>✅ Video max 100MB, MP4 H.264</li>
+                <li>✅ Max 4 suggestions per message/card</li>
+                <li>✅ Suggestion text ≤ 25 characters</li>
+                <li>✅ <code>postbackData</code> ≤ 200 characters</li>
+                <li>✅ No duplicate <code>postbackData</code> within message</li>
+                <li>✅ <code>messageId</code> is unique (UUID recommended)</li>
+                <li>✅ Brand registered with carrier</li>
+                <li>✅ Fallback SMS message prepared</li>
+            </ul>
+        </div>
+
+        <div class="cta">
+            <h2>Want More? Get the Full Kit</h2>
+            <p>15+ templates, complete GSMA validation checklist, SMS-to-RCS migration playbook, MCP integration patterns, carrier approval guide, and testing matrix.</p>
+            <a href="https://rcsxplatform.net">Learn More →</a>
+        </div>
+
+        <p style="text-align: center; color: #4f5f71; font-size: 0.9rem;">
+            Built by the team behind <a href="https://rcsxplatform.net" style="color: #0d6efd;">RCS X</a> — the professional RCS emulator.<br>
+            <a href="https://github.com/Dr-Agentic/rcs-templates" style="color: #0d6efd;">View on GitHub</a> · 
+            <a href="https://dev.to/rcsxplatform" style="color: #0d6efd;">Read on DEV</a>
+        </p>
+    </div>
+</body>
+</html>
