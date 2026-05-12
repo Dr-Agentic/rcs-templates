@@ -1,0 +1,34 @@
+{
+  "contentMessage": {
+    "richCard": {
+      "standaloneCard": {
+        "cardOrientation": "VERTICAL",
+        "cardContent": {
+          "title": "Coffee Time ☕",
+          "description": "Start your morning with the perfect cup. Fresh roasted beans delivered to your door.",
+          "media": {
+            "height": "MEDIUM",
+            "contentInfo": {
+              "fileUrl": "https://your-cdn.com/images/coffee-hero.jpg",
+              "mimeType": "image/jpeg"
+            }
+          },
+          "suggestions": [
+            {
+              "action": {
+                "text": "Order Now",
+                "postbackData": "order_coffee"
+              }
+            },
+            {
+              "action": {
+                "text": "View Menu",
+                "postbackData": "view_menu"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

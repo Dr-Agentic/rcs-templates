@@ -1,0 +1,19 @@
+{
+  "contentMessage": {
+    "text": "Would you like to proceed?",
+    "suggestions": [
+      {
+        "reply": {
+          "text": "Yes, I'm interested",
+          "postbackData": "interested_yes"
+        }
+      },
+      {
+        "reply": {
+          "text": "Not right now",
+          "postbackData": "interested_no"
+        }
+      }
+    ]
+  }
+}

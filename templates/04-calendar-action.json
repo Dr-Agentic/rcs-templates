@@ -1,0 +1,20 @@
+{
+  "contentMessage": {
+    "text": "Join our product launch event!",
+    "suggestions": [
+      {
+        "action": {
+          "text": "Add to Calendar",
+          "postbackData": "add_launch_calendar",
+          "fallbackUrl": "https://your-site.com/event.ics",
+          "createCalendarEventAction": {
+            "startTime": "2026-06-15T10:00:00Z",
+            "endTime": "2026-06-15T12:00:00Z",
+            "title": "Product Launch 2026",
+            "description": "Join us for the live launch of our new product line."
+          }
+        }
+      }
+    ]
+  }
+}

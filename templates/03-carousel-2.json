@@ -1,0 +1,49 @@
+{
+  "contentMessage": {
+    "richCard": {
+      "carouselCard": {
+        "cardWidth": "MEDIUM",
+        "cardContents": [
+          {
+            "title": "Eiffel Tower",
+            "description": "Iconic landmark of Paris.",
+            "media": {
+              "height": "MEDIUM",
+              "contentInfo": {
+                "fileUrl": "https://your-cdn.com/images/eiffel.jpg",
+                "mimeType": "image/jpeg"
+              }
+            },
+            "suggestions": [
+              {
+                "reply": {
+                  "text": "Book Eiffel Tour",
+                  "postbackData": "book_eiffel"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Louvre Museum",
+            "description": "World's largest art museum.",
+            "media": {
+              "height": "MEDIUM",
+              "contentInfo": {
+                "fileUrl": "https://your-cdn.com/images/louvre.jpg",
+                "mimeType": "image/jpeg"
+              }
+            },
+            "suggestions": [
+              {
+                "reply": {
+                  "text": "Book Louvre Tour",
+                  "postbackData": "book_louvre"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
